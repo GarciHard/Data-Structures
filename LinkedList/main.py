@@ -24,3 +24,4 @@ ll.append(3)
 ll.append(4)
 ll.append(5)
 
+print( 'Deleted Node at Index: 2 -> ', ll.deleteIndex( 2 ).value )

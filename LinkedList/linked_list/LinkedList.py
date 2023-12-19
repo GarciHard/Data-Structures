@@ -85,3 +85,17 @@ class LinkedList():
         newNode.next = temp.next
         temp.next = newNode
         self.length += 1
+        
+    # Method to remove a node at the given index
+    def deleteIndex(self, index):
+        if index < 0 or index >= self.length: return None
+        if index == 0: return self.deleteFirst()
+        if index == self.length - 1: return self.deleteLast()
+        
+        deletedNode = self.get( index )
+        tmpNode = self.get( index - 1 )
+        
+        tmpNode.next = deletedNode.next
+        self.length -= 1
+        
+        return deletedNode
